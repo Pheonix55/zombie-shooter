@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Top Down Shooter</title>
+  <style>
+    canvas {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .game {
+      width: 100vh;
+      width: 100dvh;
+      height: 100%;
+      background-color: cadetblue;
+    }
+  </style>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.js"></script>
+    <script type="module">
+      import MainScene from './scripts/MainScene.js';
+
+      const config = {
+        type: Phaser.AUTO,
+        width: window.innerWidth * 0.9,
+        height: window.innerHeight * 0.95,
+        physics: {
+          default: 'arcade',
+          arcade: {
+            debug: false
+          }
+        },
+        scene: [MainScene]
+      };
+
+      const game = new Phaser.Game(config);
+    </script>
+</body>
+
+</html>
